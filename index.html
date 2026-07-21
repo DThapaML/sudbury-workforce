@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sudbury Workforce | Local Help. Real Results.</title>
+<meta name="description" content="Reliable help for your home, yard and more. Cleaning, lawn care, snow removal, moving, handyman and general labour in Sudbury & area. Free estimates, same-day service.">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#top" class="logo">
+      <img src="images/logo.png" alt="Sudbury Workforce - Local Help. Real Results." class="logo-img">
+    </a>
+    <nav class="main-nav" id="main-nav">
+      <a href="#services">Services</a>
+      <a href="#inquiry">Get a Quote</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#inquiry" class="btn btn-header">Get a Free Quote</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <h1>NEED A <span>HAND?</span></h1>
+        <div class="rule"></div>
+        <h2>We've got you covered.</h2>
+        <p>Reliable help for your home, yard and more &mdash; from Sudbury's own workforce.</p>
+        <a href="#inquiry" class="btn btn-primary">Request a Free Estimate</a>
+
+        <ul class="feature-list">
+          <li>
+            <span class="feature-icon">$</span>
+            <div><strong>Affordable Rates</strong><p>Fair pricing. No hidden fees.</p></div>
+          </li>
+          <li>
+            <span class="feature-icon">&#9201;</span>
+            <div><strong>Same-Day Service</strong><p>Quick response when you need it.</p></div>
+          </li>
+          <li>
+            <span class="feature-icon">&#128737;</span>
+            <div><strong>Reliable &amp; Trustworthy</strong><p>Dependable service you can count on.</p></div>
+          </li>
+          <li>
+            <span class="feature-icon">&#128077;</span>
+            <div><strong>Free Estimates</strong><p>Get a quote, no obligation.</p></div>
+          </li>
+        </ul>
+      </div>
+      <div class="hero-art">
+        <div class="photo-grid">
+          <img src="images/cleaning.jpg" alt="Residential cleaning service">
+          <img src="images/lawncare.jpg" alt="Lawn care and grass cutting">
+          <img src="images/moving.jpg" alt="Moving and lifting assistance">
+          <img src="images/snow.jpg" alt="Snow and ice clearing">
+          <img src="images/toolbelt.jpg" alt="Handyman and odd jobs">
+          <img src="images/construction.jpg" alt="Construction and general labour">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="container">
+      <h2 class="section-title">What We Do</h2>
+      <p class="section-sub">Pick a service below and we'll take it from there.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">&#127968;</div>
+          <h3>Residential &amp; Apartment Cleaning</h3>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#128172;</div>
+          <h3>Lawn Care / Grass Cutting</h3>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#10052;&#65039;</div>
+          <h3>Snow &amp; Ice Clearing</h3>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#128230;</div>
+          <h3>Moving &amp; Lifting Assistance</h3>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#128295;</div>
+          <h3>Odd Jobs / Handyman Tasks</h3>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#128119;</div>
+          <h3>Construction &amp; General Labour</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="inquiry" id="inquiry">
+    <div class="container inquiry-inner">
+      <div class="inquiry-copy">
+        <h2>Get Your Free Estimate</h2>
+        <p>Fill out the form and we'll send your request straight to our WhatsApp &mdash; just hit send when it opens and we'll get back to you fast.</p>
+        <ul class="trust-list">
+          <li>Local &amp; reliable, proudly based in Sudbury</li>
+          <li>We show up. We get it done.</li>
+          <li>Your satisfaction is our priority</li>
+        </ul>
+      </div>
+
+      <form id="inquiry-form" class="inquiry-form" novalidate>
+        <div class="form-row">
+          <label for="name">Full Name <span>*</span></label>
+          <input type="text" id="name" name="name" required autocomplete="name" placeholder="Jane Smith">
+        </div>
+
+        <div class="form-row">
+          <label for="phone">Phone Number <span>*</span></label>
+          <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="(705) 555-1234">
+        </div>
+
+        <div class="form-row">
+          <label for="service">Service Needed <span>*</span></label>
+          <select id="service" name="service" required>
+            <option value="" disabled selected>Select a service</option>
+            <option>Residential &amp; Apartment Cleaning</option>
+            <option>Lawn Care / Grass Cutting</option>
+            <option>Snow &amp; Ice Clearing</option>
+            <option>Moving &amp; Lifting Assistance</option>
+            <option>Odd Jobs / Handyman Tasks</option>
+            <option>Construction &amp; General Labour</option>
+            <option>Something else</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="address">Address / Area (optional)</label>
+          <input type="text" id="address" name="address" autocomplete="street-address" placeholder="Neighbourhood or address">
+        </div>
+
+        <div class="form-row">
+          <label for="message">Tell us what you need <span>*</span></label>
+          <textarea id="message" name="message" rows="4" required placeholder="e.g. Need my driveway shoveled after every snowfall this winter"></textarea>
+        </div>
+
+        <p id="form-error" class="form-error" role="alert" hidden>Please fill in your name, phone, service and details.</p>
+
+        <button type="submit" class="btn btn-primary btn-full">
+          Send Inquiry on WhatsApp
+        </button>
+        <p class="form-note">You'll be taken to WhatsApp with your details pre-filled &mdash; just tap Send.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" id="contact">
+  <div class="container footer-inner">
+    <div class="footer-contact">
+      <a class="footer-link" href="tel:+14372201236">
+        <span class="footer-icon">&#128222;</span>
+        <span>Call or Text<br><strong>437-220-1236</strong></span>
+      </a>
+      <a class="footer-link" href="mailto:milanbohara298@gmail.com">
+        <span class="footer-icon">&#9993;&#65039;</span>
+        <span>Email Us<br><strong>milanbohara298@gmail.com</strong></span>
+      </a>
+      <a class="footer-link" href="https://wa.me/17055629047" target="_blank" rel="noopener">
+        <span class="footer-icon">&#128172;</span>
+        <span>WhatsApp<br><strong>Chat With Us</strong></span>
+      </a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">&copy; <span id="year"></span> Sudbury Workforce. Local help. Real results.</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
