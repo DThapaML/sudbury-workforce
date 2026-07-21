@@ -531,6 +531,13 @@ a { color: inherit; }
 
 .footer-link strong { font-family: var(--font-head); }
 
+.footer-link-multi a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.footer-link-multi a:hover { text-decoration: underline; }
+
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.15);
   padding: 16px 0;
