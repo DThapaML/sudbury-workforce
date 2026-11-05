@@ -1,0 +1,492 @@
+{
+  "generated_by": "_src/images.py -- do not edit; rerun the script",
+  "logo": {
+    "master": "images/logo.png",
+    "variants": [
+      {
+        "width": 137,
+        "height": 48,
+        "webp": "images/opt/logo-137.webp",
+        "fallback": "images/opt/logo-137.png"
+      },
+      {
+        "width": 274,
+        "height": 96,
+        "webp": "images/opt/logo-274.webp",
+        "fallback": "images/opt/logo-274.png"
+      },
+      {
+        "width": 411,
+        "height": 144,
+        "webp": "images/opt/logo-411.webp",
+        "fallback": "images/opt/logo-411.png"
+      }
+    ]
+  },
+  "icons": {
+    "favicon": {
+      "src": "images/opt/favicon-32.png",
+      "width": 32,
+      "height": 32
+    },
+    "apple_touch_icon": {
+      "src": "images/opt/apple-touch-icon.png",
+      "width": 180,
+      "height": 180
+    }
+  },
+  "images": {
+    "cleaning": {
+      "master": "images/cleaning.jpg",
+      "width": 712,
+      "height": 534,
+      "variants": [
+        {
+          "width": 240,
+          "height": 180,
+          "webp": "images/opt/cleaning-240.webp",
+          "fallback": "images/opt/cleaning-240.jpg"
+        },
+        {
+          "width": 480,
+          "height": 360,
+          "webp": "images/opt/cleaning-480.webp",
+          "fallback": "images/opt/cleaning-480.jpg"
+        },
+        {
+          "width": 712,
+          "height": 534,
+          "webp": "images/opt/cleaning-712.webp",
+          "fallback": "images/opt/cleaning-712.jpg"
+        }
+      ],
+      "og": {
+        "src": "images/opt/og/cleaning.jpg",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    "construction": {
+      "master": "images/construction.jpg",
+      "width": 711,
+      "height": 533,
+      "variants": [
+        {
+          "width": 240,
+          "height": 180,
+          "webp": "images/opt/construction-240.webp",
+          "fallback": "images/opt/construction-240.jpg"
+        },
+        {
+          "width": 480,
+          "height": 360,
+          "webp": "images/opt/construction-480.webp",
+          "fallback": "images/opt/construction-480.jpg"
+        },
+        {
+          "width": 711,
+          "height": 533,
+          "webp": "images/opt/construction-711.webp",
+          "fallback": "images/opt/construction-711.jpg"
+        }
+      ],
+      "og": {
+        "src": "images/opt/og/construction.jpg",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    "lawncare": {
+      "master": "images/lawncare.jpg",
+      "width": 711,
+      "height": 533,
+      "variants": [
+        {
+          "width": 240,
+          "height": 180,
+          "webp": "images/opt/lawncare-240.webp",
+          "fallback": "images/opt/lawncare-240.jpg"
+        },
+        {
+          "width": 480,
+          "height": 360,
+          "webp": "images/opt/lawncare-480.webp",
+          "fallback": "images/opt/lawncare-480.jpg"
+        },
+        {
+          "width": 711,
+          "height": 533,
+          "webp": "images/opt/lawncare-711.webp",
+          "fallback": "images/opt/lawncare-711.jpg"
+        }
+      ],
+      "og": {
+        "src": "images/opt/og/lawncare.jpg",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    "moving": {
+      "master": "images/moving.jpg",
+      "width": 600,
+      "height": 450,
+      "variants": [
+        {
+          "width": 240,
+          "height": 180,
+          "webp": "images/opt/moving-240.webp",
+          "fallback": "images/opt/moving-240.jpg"
+        },
+        {
+          "width": 480,
+          "height": 360,
+          "webp": "images/opt/moving-480.webp",
+          "fallback": "images/opt/moving-480.jpg"
+        },
+        {
+          "width": 600,
+          "height": 450,
+          "webp": "images/opt/moving-600.webp",
+          "fallback": "images/opt/moving-600.jpg"
+        }
+      ],
+      "og": {
+        "src": "images/opt/og/moving.jpg",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    "snow": {
+      "master": "images/snow.jpg",
+      "width": 800,
+      "height": 600,
+      "variants": [
+        {
+          "width": 240,
+          "height": 180,
+          "webp": "images/opt/snow-240.webp",
+          "fallback": "images/opt/snow-240.jpg"
+        },
+        {
+          "width": 480,
+          "height": 360,
+          "webp": "images/opt/snow-480.webp",
+          "fallback": "images/opt/snow-480.jpg"
+        },
+        {
+          "width": 800,
+          "height": 600,
+          "webp": "images/opt/snow-800.webp",
+          "fallback": "images/opt/snow-800.jpg"
+        }
+      ],
+      "og": {
+        "src": "images/opt/og/snow.jpg",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    "toolbelt": {
+      "master": "images/toolbelt.jpg",
+      "width": 800,
+      "height": 600,
+      "variants": [
+        {
+          "width": 240,
+          "height": 180,
+          "webp": "images/opt/toolbelt-240.webp",
+          "fallback": "images/opt/toolbelt-240.jpg"
+        },
+        {
+          "width": 480,
+          "height": 360,
+          "webp": "images/opt/toolbelt-480.webp",
+          "fallback": "images/opt/toolbelt-480.jpg"
+        },
+        {
+          "width": 800,
+          "height": 600,
+          "webp": "images/opt/toolbelt-800.webp",
+          "fallback": "images/opt/toolbelt-800.jpg"
+        }
+      ],
+      "og": {
+        "src": "images/opt/og/toolbelt.jpg",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    "work/appliance-after": {
+      "master": "images/work/appliance-after.jpg",
+      "width": 618,
+      "height": 464,
+      "variants": [
+        {
+          "width": 240,
+          "height": 180,
+          "webp": "images/opt/work/appliance-after-240.webp",
+          "fallback": "images/opt/work/appliance-after-240.jpg"
+        },
+        {
+          "width": 480,
+          "height": 360,
+          "webp": "images/opt/work/appliance-after-480.webp",
+          "fallback": "images/opt/work/appliance-after-480.jpg"
+        },
+        {
+          "width": 618,
+          "height": 464,
+          "webp": "images/opt/work/appliance-after-618.webp",
+          "fallback": "images/opt/work/appliance-after-618.jpg"
+        }
+      ],
+      "og": {
+        "src": "images/opt/og/work/appliance-after.jpg",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    "work/appliance-before": {
+      "master": "images/work/appliance-before.jpg",
+      "width": 618,
+      "height": 464,
+      "variants": [
+        {
+          "width": 240,
+          "height": 180,
+          "webp": "images/opt/work/appliance-before-240.webp",
+          "fallback": "images/opt/work/appliance-before-240.jpg"
+        },
+        {
+          "width": 480,
+          "height": 360,
+          "webp": "images/opt/work/appliance-before-480.webp",
+          "fallback": "images/opt/work/appliance-before-480.jpg"
+        },
+        {
+          "width": 618,
+          "height": 464,
+          "webp": "images/opt/work/appliance-before-618.webp",
+          "fallback": "images/opt/work/appliance-before-618.jpg"
+        }
+      ],
+      "og": {
+        "src": "images/opt/og/work/appliance-before.jpg",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    "work/gazebo-delivery": {
+      "master": "images/work/gazebo-delivery.jpg",
+      "width": 618,
+      "height": 464,
+      "variants": [
+        {
+          "width": 240,
+          "height": 180,
+          "webp": "images/opt/work/gazebo-delivery-240.webp",
+          "fallback": "images/opt/work/gazebo-delivery-240.jpg"
+        },
+        {
+          "width": 480,
+          "height": 360,
+          "webp": "images/opt/work/gazebo-delivery-480.webp",
+          "fallback": "images/opt/work/gazebo-delivery-480.jpg"
+        },
+        {
+          "width": 618,
+          "height": 464,
+          "webp": "images/opt/work/gazebo-delivery-618.webp",
+          "fallback": "images/opt/work/gazebo-delivery-618.jpg"
+        }
+      ],
+      "og": {
+        "src": "images/opt/og/work/gazebo-delivery.jpg",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    "work/lawn-turf": {
+      "master": "images/work/lawn-turf.jpg",
+      "width": 800,
+      "height": 600,
+      "variants": [
+        {
+          "width": 240,
+          "height": 180,
+          "webp": "images/opt/work/lawn-turf-240.webp",
+          "fallback": "images/opt/work/lawn-turf-240.jpg"
+        },
+        {
+          "width": 480,
+          "height": 360,
+          "webp": "images/opt/work/lawn-turf-480.webp",
+          "fallback": "images/opt/work/lawn-turf-480.jpg"
+        },
+        {
+          "width": 800,
+          "height": 600,
+          "webp": "images/opt/work/lawn-turf-800.webp",
+          "fallback": "images/opt/work/lawn-turf-800.jpg"
+        }
+      ],
+      "og": {
+        "src": "images/opt/og/work/lawn-turf.jpg",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    "work/snow-after": {
+      "master": "images/work/snow-after.jpg",
+      "width": 618,
+      "height": 464,
+      "variants": [
+        {
+          "width": 240,
+          "height": 180,
+          "webp": "images/opt/work/snow-after-240.webp",
+          "fallback": "images/opt/work/snow-after-240.jpg"
+        },
+        {
+          "width": 480,
+          "height": 360,
+          "webp": "images/opt/work/snow-after-480.webp",
+          "fallback": "images/opt/work/snow-after-480.jpg"
+        },
+        {
+          "width": 618,
+          "height": 464,
+          "webp": "images/opt/work/snow-after-618.webp",
+          "fallback": "images/opt/work/snow-after-618.jpg"
+        }
+      ],
+      "og": {
+        "src": "images/opt/og/work/snow-after.jpg",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    "work/snow-before": {
+      "master": "images/work/snow-before.jpg",
+      "width": 800,
+      "height": 600,
+      "variants": [
+        {
+          "width": 240,
+          "height": 180,
+          "webp": "images/opt/work/snow-before-240.webp",
+          "fallback": "images/opt/work/snow-before-240.jpg"
+        },
+        {
+          "width": 480,
+          "height": 360,
+          "webp": "images/opt/work/snow-before-480.webp",
+          "fallback": "images/opt/work/snow-before-480.jpg"
+        },
+        {
+          "width": 800,
+          "height": 600,
+          "webp": "images/opt/work/snow-before-800.webp",
+          "fallback": "images/opt/work/snow-before-800.jpg"
+        }
+      ],
+      "og": {
+        "src": "images/opt/og/work/snow-before.jpg",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    "work/tree-planting": {
+      "master": "images/work/tree-planting.jpg",
+      "width": 800,
+      "height": 600,
+      "variants": [
+        {
+          "width": 240,
+          "height": 180,
+          "webp": "images/opt/work/tree-planting-240.webp",
+          "fallback": "images/opt/work/tree-planting-240.jpg"
+        },
+        {
+          "width": 480,
+          "height": 360,
+          "webp": "images/opt/work/tree-planting-480.webp",
+          "fallback": "images/opt/work/tree-planting-480.jpg"
+        },
+        {
+          "width": 800,
+          "height": 600,
+          "webp": "images/opt/work/tree-planting-800.webp",
+          "fallback": "images/opt/work/tree-planting-800.jpg"
+        }
+      ],
+      "og": {
+        "src": "images/opt/og/work/tree-planting.jpg",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    "work/washer-delivery": {
+      "master": "images/work/washer-delivery.jpg",
+      "width": 618,
+      "height": 464,
+      "variants": [
+        {
+          "width": 240,
+          "height": 180,
+          "webp": "images/opt/work/washer-delivery-240.webp",
+          "fallback": "images/opt/work/washer-delivery-240.jpg"
+        },
+        {
+          "width": 480,
+          "height": 360,
+          "webp": "images/opt/work/washer-delivery-480.webp",
+          "fallback": "images/opt/work/washer-delivery-480.jpg"
+        },
+        {
+          "width": 618,
+          "height": 464,
+          "webp": "images/opt/work/washer-delivery-618.webp",
+          "fallback": "images/opt/work/washer-delivery-618.jpg"
+        }
+      ],
+      "og": {
+        "src": "images/opt/og/work/washer-delivery.jpg",
+        "width": 1200,
+        "height": 630
+      }
+    }
+  },
+  "videos": {
+    "work/trimming": {
+      "master": "images/work/trimming.mp4",
+      "src": "images/opt/work/trimming.mp4",
+      "width": 640,
+      "height": 480,
+      "poster": {
+        "src": "images/opt/work/trimming-poster.jpg",
+        "width": 480,
+        "height": 360
+      }
+    }
+  },
+  "masters": {
+    "images/cleaning.jpg": "e1573ce06d38dc414dbc8f10426a945e6b89c893",
+    "images/construction.jpg": "3483f5704f9ec66257b1432ece263dd126de6404",
+    "images/favicon.png": "6c0c9dea909fec3d9f9dba29782e1df4f8afbdf5",
+    "images/lawncare.jpg": "87d03a7905b743464c6d25d6022c18f524842a49",
+    "images/logo.png": "ff1c50abc318ce57bd0422d9c0d6e6728f6ae81f",
+    "images/moving.jpg": "352ac56f2eeacdc1051ee297e6b2adc5f5328d54",
+    "images/snow.jpg": "dea1f206c644e6f48ac18ebc1c20636a0e9ce077",
+    "images/toolbelt.jpg": "0bb3d080ddd9c77d49abf418c03f151d39099152",
+    "images/work/appliance-after.jpg": "584801e6ca6adb7a57af19ca1027c74e2768eb8a",
+    "images/work/appliance-before.jpg": "cfffe4e0c8265b7c63f6ecd56e46dd79dfbce469",
+    "images/work/gazebo-delivery.jpg": "c4da756f85a30c4f0fb2c97890772564dbf31ad2",
+    "images/work/lawn-turf.jpg": "510197b1c213b2f6a51f9a4e2636c49a60d039e0",
+    "images/work/snow-after.jpg": "a2c739593b38f896b2121a0d1ce313a88391662f",
+    "images/work/snow-before.jpg": "b412def38af80f7e119a48c46b65e703ce0f03c5",
+    "images/work/tree-planting.jpg": "b5f5d181564993b76abcfdd0d6f958e38ea7cb3b",
+    "images/work/trimming.mp4": "8cd359f41eacbf685cdd8fd517994659ebe842c9",
+    "images/work/washer-delivery.jpg": "5f994800f0e47ce36ed15359a0682c0f7561b940"
+  }
+}
