@@ -17,6 +17,33 @@
     });
   }
 
+  // The Services menu: its button opens the list of service pages (on wide
+  // screens hovering opens it too, see styles.css). Escape, a click elsewhere
+  // or tabbing away closes it.
+  document.querySelectorAll('.nav-dropdown').forEach(function (dropdown) {
+    var button = dropdown.querySelector('.nav-dropdown-toggle');
+    if (!button) return;
+    function setOpen(open) {
+      dropdown.classList.toggle('open', open);
+      button.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+    button.addEventListener('click', function () {
+      setOpen(!dropdown.classList.contains('open'));
+    });
+    dropdown.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && dropdown.classList.contains('open')) {
+        setOpen(false);
+        button.focus();
+      }
+    });
+    dropdown.addEventListener('focusout', function (e) {
+      if (!dropdown.contains(e.relatedTarget)) setOpen(false);
+    });
+    document.addEventListener('click', function (e) {
+      if (!dropdown.contains(e.target)) setOpen(false);
+    });
+  });
+
   // Videos carry their file in data-src, so nothing downloads until the
   // player is close to the screen; then it plays muted on a loop.
   var videos = document.querySelectorAll('video[data-src]');

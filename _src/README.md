@@ -37,6 +37,9 @@ that start with `_` are not published, so nothing in `_src/` goes live.
     `{{root}}` in front of every internal link, e.g. `{{root}}areas-we-serve/`
 - The header, footer, quote form and mobile Call/WhatsApp bar are added to every
   page by `build.py`.
+- **Menu:** `nav` in `site.json`. The Services entry has `"submenu": "services"`,
+  so its dropdown lists every service in `services` automatically; a new service
+  appears there, in the footer and on the home grid without further edits.
 - **New job photo:** put it in `images/work/`, add it to `work` in `site.json` and
   to the matching service's `photos`, then run `images.py` and `build.py`.
 

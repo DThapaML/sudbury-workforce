@@ -277,6 +277,18 @@ class CallTests(unittest.TestCase):
                     self.assertEqual(href, MAIN_TEL, f'{out}: .{css}')
 
 
+class ServicesMenuTests(unittest.TestCase):
+    def test_every_page_menu_lists_every_service_page(self):
+        slugs = [s['slug'] for s in SITE['services']]
+        for out in PAGES:
+            text = (ROOT / out).read_text(encoding='utf-8')
+            menu = re.search(r'<ul class="sub-menu" id="nav-services">(.*?)</ul>', text, re.S)
+            self.assertTrue(menu, f'{out}: no Services menu')
+            page_url = LIVE_URL + ('' if out == 'index.html' else out.replace('index.html', ''))
+            resolved = [urljoin(page_url, h) for h in re.findall(r'href="([^"]+)"', menu.group(1))]
+            self.assertEqual(resolved, [LIVE_URL + f'{slug}/' for slug in slugs] + [LIVE_URL + '#services'], out)
+
+
 # --------------------------------------------------------------------------- matrix: Unknown URL
 
 class NotFoundTests(unittest.TestCase):
@@ -424,7 +436,7 @@ next();
             self.assertLessEqual(r['scrollWidth'], r['clientWidth'], f'{name}: scrolls sideways at 390px')
 
     def test_every_page_at_tablet_and_desktop_widths_shows_the_right_menu(self):
-        for (width, path), r in self.layout([800, 1000, 1200]).items():
+        for (width, path), r in self.layout([800, 1000, 1100, 1200]).items():
             name = f'{path or "home"} at {width}px'
             self.assertLessEqual(r['scrollWidth'], r['clientWidth'], f'{name}: scrolls sideways')
             self.assertFalse(r['bar'], f'{name}: mobile Call/WhatsApp bar should be hidden')
@@ -433,6 +445,49 @@ next();
             else:
                 self.assertTrue(r['inlineNav'], f'{name}: the nav should show inline')
                 self.assertFalse(r['toggle'], f'{name}: menu button should be hidden')
+
+    def test_services_menu_opens_on_click_and_closes_on_escape_or_outside_click(self):
+        page = harness(self.site, 'menu.html', r'''
+var frame = document.getElementById('page'), out = {}, step = 0;
+function state(w, d) {
+  var sub = d.getElementById('nav-services');
+  return {open: w.getComputedStyle(sub).display !== 'none' && sub.offsetHeight > 0,
+          expanded: d.querySelector('.nav-dropdown-toggle').getAttribute('aria-expanded')};
+}
+frame.addEventListener('load', function () {
+  var w = frame.contentWindow, d = w.document, button = d.querySelector('.nav-dropdown-toggle');
+  if (step === 0) {  // desktop: a click opens it, Escape closes it
+    out.links = d.querySelectorAll('#nav-services a').length;
+    out.desktopClosed = state(w, d);
+    button.click();
+    out.desktopOpen = state(w, d);
+    button.dispatchEvent(new w.KeyboardEvent('keydown', {key: 'Escape', bubbles: true}));
+    out.desktopEscape = state(w, d);
+    step = 1;
+    frame.style.width = '390px';
+    frame.src = '../?phone';
+  } else {  // phone: open the menu, tap Services, then tap elsewhere
+    d.getElementById('nav-toggle').click();
+    out.phoneClosed = state(w, d);
+    button.click();
+    out.phoneOpen = state(w, d);
+    d.querySelector('main').click();
+    out.phoneOutside = state(w, d);
+    report(out);
+  }
+});
+frame.style.width = '1200px';
+frame.src = '../';
+''')
+        out = chrome_result(self, self.base + page)
+        closed, opened = {'open': False, 'expanded': 'false'}, {'open': True, 'expanded': 'true'}
+        self.assertEqual(out['links'], len(SITE['services']) + 1)
+        self.assertEqual(out['desktopClosed'], closed)
+        self.assertEqual(out['desktopOpen'], opened)
+        self.assertEqual(out['desktopEscape'], closed)
+        self.assertEqual(out['phoneClosed'], closed)
+        self.assertEqual(out['phoneOpen'], opened)
+        self.assertEqual(out['phoneOutside'], closed)
 
     def test_video_downloads_only_when_scrolled_near(self):
         page = harness(self.site, 'video.html', r'''

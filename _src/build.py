@@ -50,6 +50,9 @@ ICON_CHAT = ('<svg class="icon" viewBox="0 0 24 24" width="18" height="18" aria-
              '<path fill="currentColor" d="M12 2C6.5 2 2 6 2 11c0 2.6 1.3 5 3.3 6.6L4.5 22l4.6-2.2c.9.2 1.9.3 '
              '2.9.3 5.5 0 10-4 10-9S17.5 2 12 2z"/></svg>')
 
+ICON_CHEVRON = ('<svg class="icon icon-chevron" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" '
+                'focusable="false"><path fill="currentColor" d="M7.4 8.6 12 13.2l4.6-4.6L18 10l-6 6-6-6z"/></svg>')
+
 TAG = re.compile(r'\{\{\s*([a-z_][a-z0-9_]*)([^{}]*?)\s*\}\}')
 HEADER = re.compile(r'\A\s*<!--(.*?)-->', re.S)
 SLUG = re.compile(r'^[a-z0-9]+(-[a-z0-9]+)*$')
@@ -126,6 +129,8 @@ def load_site():
         need(item, 'label', f'{w} nav[{i}]')
         if not item.get('page') and not item.get('anchor'):
             raise BuildError(f'{w} nav[{i}]: missing field "page" or "anchor"')
+        if item.get('submenu') not in (None, 'services'):
+            raise BuildError(f'{w} nav[{i}]: "submenu" can only be "services"')
     for i, item in enumerate(need(site, 'footer_links', w, list)):
         need(item, 'label', f'{w} footer_links[{i}]')
         need(item, 'page', f'{w} footer_links[{i}]')
@@ -609,12 +614,28 @@ class Renderer:
         data = {'@context': 'https://schema.org', '@graph': graph}
         return json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
 
+    def services_menu(self, item, all_href):
+        """The menu's Services entry: a button that opens a list of every service page."""
+        items = []
+        for s in self.services:
+            current = ' aria-current="page"' if s['slug'] == self.page.id else ''
+            items.append(f'<li><a href="{self.link(s["slug"])}"{current}>{esc(s["name"])}</a></li>')
+        items.append(f'<li class="sub-menu-all"><a href="{all_href}">See all services</a></li>')
+        return ('      <div class="nav-dropdown">'
+                '<button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-services">'
+                f'{esc(item["label"])}{ICON_CHEVRON}</button>'
+                f'<ul class="sub-menu" id="nav-services">{"".join(items)}</ul></div>')
+
     def header(self):
         links = []
         for item in self.site['nav']:
             target = item.get('page')
+            href = self.link(target, item.get('anchor'))
+            if item.get('submenu') == 'services':
+                links.append(self.services_menu(item, href))
+                continue
             current = ' aria-current="page"' if target == self.page.id and not item.get('anchor') else ''
-            links.append(f'      <a href="{self.link(target, item.get("anchor"))}"{current}>{esc(item["label"])}</a>')
+            links.append(f'      <a href="{href}"{current}>{esc(item["label"])}</a>')
         logo_href = '#top' if self.page.is_home else self.link('home')
         phone = esc(self.biz['phone'])
         return '\n'.join([

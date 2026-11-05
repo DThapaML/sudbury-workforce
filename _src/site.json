@@ -20,7 +20,7 @@
   },
 
   "nav": [
-    {"label": "Services", "page": "home", "anchor": "services"},
+    {"label": "Services", "page": "home", "anchor": "services", "submenu": "services"},
     {"label": "Areas We Serve", "page": "areas-we-serve"},
     {"label": "Our Work", "page": "home", "anchor": "work"},
     {"label": "Get a Quote", "anchor": "inquiry"},
