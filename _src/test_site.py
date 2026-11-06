@@ -328,8 +328,9 @@ class CheckTests(unittest.TestCase):
 
     def test_check_lists_each_violation_and_fails(self):
         site = copy_site(self)
-        edit(site / '_src/pages/snow-removal-sudbury.html', '<h2>Snow Clearing for Sudbury Homes</h2>',
-             '<h2>Snow Clearing for Sudbury Homes</h2>\n    <p>Get 10% off, only $40, fully insured.</p>')
+        # {{h1}} appears exactly once on every page, so it's a stable place to inject copy.
+        edit(site / '_src/pages/snow-removal-sudbury.html', '{{h1}}',
+             '{{h1}}\n      <p>Get 10% off, only $40, fully insured.</p>')
         build(self, site)
         result = run(site, 'check.py')
         output = result.stdout + result.stderr
